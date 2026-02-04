@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.univaq.disim.lpo.dominiouniversitario.controller.GestioneAppelliController">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="300.0" spacing="25.0" style="-fx-background-color: #f1c350;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="250.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo-univaq.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="100.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="profileButton" mnemonicParsing="false" onAction="#handleProfiloDocente" prefWidth="250.0" styleClass="vbox-button" stylesheets="@../styles.css" text="Profilo docente" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="appelliButton" alignment="CENTER" mnemonicParsing="false" prefWidth="250.0" styleClass="vbox-button" stylesheets="@../styles.css" text="Gestione Appelli" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="votesButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleRegistrazioneVoti" prefWidth="250.0" styleClass="vbox-button" stylesheets="@../styles.css" text="Registrazione voti" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="insegnamentiButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleInsegnamentiAttivi" prefWidth="250.0" styleClass="vbox-button" stylesheets="@../styles.css" text="Insegnamenti Attivi" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleLogout" prefWidth="250.0" styleClass="vbox-button" stylesheets="@../styles.css" text="Logout" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="-80.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="80.0" style="-fx-background-color: #203A74;" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <Label alignment="TOP_LEFT" text="Gestione Appelli" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="56.0" />
+               </font>
+            </Label>
+         </children></HBox>
+   </top>
+   <center>
+      <VBox spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <!-- Titolo della sezione -->
+            <Label text="Elenco Appelli Programmati">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+
+            <!-- Barra di Ricerca -->
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="Cerca:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <javafx.scene.control.TextField fx:id="searchField" promptText="Filtra per insegnamento o data..." HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+
+            <!-- Tabella degli Appelli -->
+            <javafx.scene.control.TableView fx:id="tabellaAppelli" VBox.vgrow="ALWAYS">
+              <columns>
+                <javafx.scene.control.TableColumn fx:id="colonnaInsegnamento" prefWidth="200.0" text="Insegnamento" />
+                <javafx.scene.control.TableColumn fx:id="colonnaData" prefWidth="192.0" text="Data" />
+                <javafx.scene.control.TableColumn fx:id="colonnaLuogo" prefWidth="114.0" text="Aula" />
+                <javafx.scene.control.TableColumn fx:id="colonnaIscritti" prefWidth="68.0" text="Iscritti" />
+                <javafx.scene.control.TableColumn fx:id="colonnaDescrizione" prefWidth="101.0" text="Descrizione" />
+                <javafx.scene.control.TableColumn fx:id="colonnaAzioni" prefWidth="177.0" text="Azioni" />
+              </columns>
+               <columnResizePolicy>
+                  <javafx.scene.control.TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </javafx.scene.control.TableView>
+
+            <!-- Pulsanti di Azione -->
+            <HBox alignment="CENTER_RIGHT" spacing="15.0">
+               <children>
+                  <Button fx:id="btnAggiungiAppello" mnemonicParsing="false" style="-fx-background-color: #203A74; -fx-text-fill: white;" text="Aggiungi Appello">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

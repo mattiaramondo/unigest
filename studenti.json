@@ -1,0 +1,214 @@
+[ {
+  "nome" : "Lorenzo",
+  "cognome" : "Pietrangelo",
+  "email" : "lorenzo.pietrangelo@student.univaq.it",
+  "password" : "password",
+  "matricola" : "100000",
+  "annoDiCorso" : "PRIMO_ANNO",
+  "tipologiaLaurea" : "LAUREA_TRIENNALE",
+  "listaEsami" : [ ],
+  "corsoDiLaurea" : {
+    "nome" : "Informatica",
+    "codice" : "INFORMATICA"
+  }
+}, {
+  "nome" : "Fabrizio",
+  "cognome" : "Iezzi",
+  "email" : "fabrizio.iezzi@student.univaq.it",
+  "password" : "password",
+  "matricola" : "293486",
+  "annoDiCorso" : "FUORI_CORSO",
+  "tipologiaLaurea" : "LAUREA_TRIENNALE",
+  "listaEsami" : [ {
+    "insegnamento" : {
+      "nome" : "Programmazione a Oggetti",
+      "codiceInsegnamento" : "INF01",
+      "cfu" : 9
+    },
+    "voto" : 30,
+    "lode" : true,
+    "cfu" : 9,
+    "data" : [ 2024, 6, 15 ]
+  } ],
+  "corsoDiLaurea" : {
+    "nome" : "Informatica",
+    "codice" : "L-31"
+  }
+}, {
+  "nome" : "Cristian",
+  "cognome" : "Iannelli",
+  "email" : "cristian.iannelli@student.univaq.it",
+  "password" : "password",
+  "matricola" : "288186",
+  "annoDiCorso" : "FUORI_CORSO",
+  "tipologiaLaurea" : "LAUREA_TRIENNALE",
+  "listaEsami" : [ {
+    "insegnamento" : {
+      "nome" : "Basi di Dati",
+      "codiceInsegnamento" : "INF02",
+      "cfu" : 9
+    },
+    "voto" : 28,
+    "lode" : false,
+    "cfu" : 9,
+    "data" : [ 2024, 7, 10 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Algoritmi e Strutture Dati",
+      "codiceInsegnamento" : "INF03",
+      "cfu" : 12
+    },
+    "voto" : 30,
+    "lode" : true,
+    "cfu" : 12,
+    "data" : [ 2024, 9, 5 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Programmazione a Oggetti",
+      "codiceInsegnamento" : "INF01",
+      "cfu" : 9
+    },
+    "voto" : 20,
+    "lode" : false,
+    "cfu" : 9,
+    "data" : [ 2024, 6, 15 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Analisi Matematica 1",
+      "codiceInsegnamento" : "MAT01",
+      "cfu" : 12
+    },
+    "voto" : 0,
+    "lode" : false,
+    "cfu" : 12,
+    "data" : [ 2024, 6, 20 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Analisi Matematica 1",
+      "codiceInsegnamento" : "MAT01",
+      "cfu" : 12
+    },
+    "voto" : 0,
+    "lode" : false,
+    "cfu" : 12,
+    "data" : [ 2024, 6, 20 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Ingegneria del Software",
+      "codiceInsegnamento" : "INF04",
+      "cfu" : 9
+    },
+    "voto" : 25,
+    "lode" : false,
+    "cfu" : 9,
+    "data" : [ 2025, 12, 11 ]
+  } ],
+  "corsoDiLaurea" : {
+    "nome" : "Informatica",
+    "codice" : "L-31"
+  }
+}, {
+  "nome" : "Mattia",
+  "cognome" : "Ramondo",
+  "email" : "mattia.ramondo@student.univaq.it",
+  "password" : "password",
+  "matricola" : "291659",
+  "annoDiCorso" : "FUORI_CORSO",
+  "tipologiaLaurea" : "LAUREA_TRIENNALE",
+  "listaEsami" : [ {
+    "insegnamento" : {
+      "nome" : "Ingegneria del Software",
+      "codiceInsegnamento" : "INF04",
+      "cfu" : 9
+    },
+    "voto" : 25,
+    "lode" : false,
+    "cfu" : 9,
+    "data" : [ 2025, 12, 11 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Ingegneria del Software",
+      "codiceInsegnamento" : "INF04",
+      "cfu" : 9
+    },
+    "voto" : 25,
+    "lode" : false,
+    "cfu" : 9,
+    "data" : [ 2025, 12, 11 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Basi di Dati",
+      "codiceInsegnamento" : "INF02",
+      "cfu" : 9
+    },
+    "voto" : 26,
+    "lode" : false,
+    "cfu" : 9,
+    "data" : [ 2024, 7, 1 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Programmazione a Oggetti",
+      "codiceInsegnamento" : "INF01",
+      "cfu" : 9,
+      "corsoDiLaurea" : {
+        "nome" : "Informatica",
+        "codice" : "L-31"
+      }
+    },
+    "voto" : 0,
+    "lode" : false,
+    "cfu" : 9,
+    "data" : [ 2026, 1, 20 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Programmazione a Oggetti",
+      "codiceInsegnamento" : "INF01",
+      "cfu" : 9,
+      "corsoDiLaurea" : {
+        "nome" : "Informatica",
+        "codice" : "L-31"
+      }
+    },
+    "voto" : 0,
+    "lode" : false,
+    "cfu" : 9,
+    "data" : [ 2026, 1, 20 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Analisi Matematica 1",
+      "codiceInsegnamento" : "MAT01",
+      "cfu" : 12
+    },
+    "voto" : 26,
+    "lode" : false,
+    "cfu" : 12,
+    "data" : [ 2024, 6, 20 ]
+  }, {
+    "insegnamento" : {
+      "nome" : "Analisi Matematica 1",
+      "codiceInsegnamento" : "MAT01",
+      "cfu" : 12
+    },
+    "voto" : 26,
+    "lode" : false,
+    "cfu" : 12,
+    "data" : [ 2024, 6, 20 ]
+  } ],
+  "corsoDiLaurea" : {
+    "nome" : "Informatica",
+    "codice" : "L-31"
+  }
+}, {
+  "nome" : "Giulia",
+  "cognome" : "Verdi",
+  "email" : "giulia.verdi@student.univaq.it",
+  "password" : "password",
+  "matricola" : "300001",
+  "annoDiCorso" : "SECONDO_ANNO",
+  "tipologiaLaurea" : "LAUREA_MAGISTRALE",
+  "listaEsami" : [ ],
+  "corsoDiLaurea" : {
+    "nome" : "Ingegneria Informatica",
+    "codice" : "LM-32"
+  }
+} ]

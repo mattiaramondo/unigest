@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.univaq.disim.lpo.dominiouniversitario.controller.InsegnamentiAttiviController">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="300.0" spacing="25.0" style="-fx-background-color: #f1c350;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="250.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo-univaq.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="100.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="profileButton" onAction="#handleProfiloDocente" mnemonicParsing="false" prefWidth="250.0" styleClass="vbox-button" stylesheets="@../styles.css" text="Profilo docente" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="appelliButton" onAction="#handleGestioneAppelli" alignment="CENTER" mnemonicParsing="false" prefWidth="250.0" styleClass="vbox-button" stylesheets="@../styles.css" text="Gestione Appelli" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="votesButton" onAction="#handleRegistrazioneVoti" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefWidth="250.0" styleClass="vbox-button" stylesheets="@../styles.css" text="Registrazione voti" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="insegnamentiButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefWidth="250.0" styleClass="vbox-button" stylesheets="@../styles.css" text="Insegnamenti Attivi" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutButton" onAction="#handleLogout" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefWidth="250.0" styleClass="vbox-button" stylesheets="@../styles.css" text="Logout" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="-80.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="80.0" style="-fx-background-color: #203A74;" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <Label alignment="TOP_LEFT" text="Insegnamenti Attivi" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="56.0" />
+               </font>
+            </Label>
+         </children></HBox>
+   </top>
+   <center>
+      <VBox spacing="20.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Label text="Elenco Insegnamenti Assegnati">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+
+            <TableView fx:id="insegnamentiTable" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="colonnaCodice" prefWidth="150.0" text="Codice" />
+                <TableColumn fx:id="colonnaNome" prefWidth="300.0" text="Nome Insegnamento" />
+                <TableColumn fx:id="colonnaCfu" prefWidth="100.0" text="CFU" />
+                <TableColumn fx:id="colonnaCorsoLaurea" prefWidth="300.0" text="Corso di Laurea" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

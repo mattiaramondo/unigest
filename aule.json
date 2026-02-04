@@ -1,0 +1,49 @@
+[ {
+  "nomeAula" : "Ricamo A.0.6",
+  "capienza" : 12
+}, {
+  "nomeAula" : "Ricamo A.1.1",
+  "capienza" : 24
+}, {
+  "nomeAula" : "Ricamo A.1.7",
+  "capienza" : 100
+}, {
+  "nomeAula" : "Ricamo A.2.5",
+  "capienza" : 100
+}, {
+  "nomeAula" : "Ricamo A.1.8",
+  "capienza" : 100
+}, {
+  "nomeAula" : "C1.9",
+  "capienza" : 80
+}, {
+  "nomeAula" : "C1.10",
+  "capienza" : 126
+}, {
+  "nomeAula" : "C1.16",
+  "capienza" : 46
+}, {
+  "nomeAula" : "A0.4",
+  "capienza" : 46
+}, {
+  "nomeAula" : "A1.1",
+  "capienza" : 46
+}, {
+  "nomeAula" : "A1.3",
+  "capienza" : 46
+}, {
+  "nomeAula" : "A1.2",
+  "capienza" : 46
+}, {
+  "nomeAula" : "A1.4",
+  "capienza" : 46
+}, {
+  "nomeAula" : "A1.5",
+  "capienza" : 46
+}, {
+  "nomeAula" : "A1.6",
+  "capienza" : 100
+}, {
+  "nomeAula" : "A1.7",
+  "capienza" : 100
+} ]
