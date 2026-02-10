@@ -1,62 +1,138 @@
 # 🎓 University Management System (UniGest)
 
-![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![JavaFX](https://img.shields.io/badge/JavaFX-UI-007396?style=for-the-badge&logo=java&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
+![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge\&logo=openjdk\&logoColor=white)
+![JavaFX](https://img.shields.io/badge/JavaFX-UI-007396?style=for-the-badge\&logo=java\&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge\&logo=apache-maven\&logoColor=white)
 ![Architecture](https://img.shields.io/badge/Pattern-MVC-success?style=for-the-badge)
 
 > **Progetto finale per il corso di Laboratorio di Programmazione a Oggetti (LPO)**
 > *Università degli Studi dell'Aquila*
 
+---
+
 ## 📖 Descrizione
-**UniGest** è un'applicazione desktop standalone progettata per digitalizzare e gestire i processi accademici di un ateneo. Il software simula un portale di segreteria completo, permettendo l'interazione tra le tre figure chiave dell'ecosistema universitario: **Studenti**, **Docenti** e **Amministratori**.
+
+**UniGest** è un'applicazione desktop standalone progettata per digitalizzare e gestire i processi accademici di un ateneo.
+Il software simula un portale di segreteria completo, permettendo l'interazione tra le tre figure chiave dell'ecosistema universitario:
+
+* 👨‍🎓 **Studenti**
+* 👩‍🏫 **Docenti**
+* 🛠 **Amministratori**
+
 ---
 
 ## ✨ Funzionalità Principali
 
-Il sistema gestisce l'accesso sicuro tramite login e reindirizza l'utente a dashboard personalizzate in base al ruolo (RBAC - Role Based Access Control).
+Il sistema gestisce l'accesso sicuro tramite **login** e reindirizza l'utente a **dashboard personalizzate** in base al ruolo
+(**RBAC – Role Based Access Control**).
 
 ### 👨‍🎓 Area Studente
-* **Prenotazione Esami:** Visualizzazione degli appelli disponibili e iscrizione immediata.
-* **Libretto Digitale:** Consultazione dello storico esami, voti verbalizzati, media ponderata e CFU acquisiti.
-* **Profilo:** Gestione dei dati anagrafici e visualizzazione dello stato accademico.
+
+* **Prenotazione Esami**: visualizzazione degli appelli disponibili e iscrizione immediata
+* **Libretto Digitale**: storico esami, voti verbalizzati, media ponderata e CFU acquisiti
+* **Profilo**: gestione dati anagrafici e visualizzazione stato accademico
 
 ### 👩‍🏫 Area Docente
-* **Gestione Appelli:** Creazione, modifica e cancellazione delle date d'esame.
-* **Verbalizzazione Voti:** Interfaccia dedicata per l'inserimento degli esiti per gli studenti iscritti.
-* **Dashboard Corsi:** Panoramica degli insegnamenti assegnati e degli studenti iscritti ai corsi.
+
+* **Gestione Appelli**: creazione, modifica e cancellazione degli esami
+* **Verbalizzazione Voti**: inserimento degli esiti per gli studenti prenotati
+* **Dashboard Corsi**: panoramica degli insegnamenti e degli iscritti
 
 ### 🛠 Area Amministratore (Segreteria)
-* **Gestione Utenti:** CRUD completo (Create, Read, Update, Delete) per profili Studenti e Docenti.
-* **Gestione Didattica:** Configurazione dei Corsi di Laurea, Insegnamenti e assegnazione cattedre.
-* **Gestione Logistica:** Ricerca e gestione delle aule universitarie.
-* **Analisi:** Monitoraggio degli insegnamenti attivi.
+
+* **Gestione Utenti**: CRUD completo per Studenti e Docenti
+* **Gestione Didattica**: configurazione Corsi di Laurea e Insegnamenti
+* **Gestione Logistica**: ricerca e gestione delle aule universitarie
+* **Analisi**: monitoraggio degli insegnamenti attivi
 
 ---
 
 ## 🏗 Architettura e Stack Tecnologico
 
-Il progetto non utilizza database relazionali tradizionali, ma implementa un **sistema di persistenza custom basato su file JSON**, gestito tramite la libreria Jackson. Questo simula un database NoSQL leggero e portabile.
+Il progetto **non utilizza database relazionali tradizionali**, ma implementa un
+**sistema di persistenza custom basato su file JSON**, simulando un database NoSQL leggero e portabile.
 
-* **Linguaggio:** Java SE 17
-* **Interfaccia Grafica:** JavaFX (con definizione layout in FXML e styling CSS).
-* **Design Pattern:**
-    * **MVC:** Separazione netta tra logica di business, dati e interfaccia.
-    * **Singleton:** Per la gestione condivisa delle risorse (es. `ViewDispatcher`).
-    * **DAO/Service Layer:** Astrazione delle operazioni di lettura/scrittura dati.
-* **Persistenza Dati:** Serializzazione/Deserializzazione JSON tramite `Jackson Databind`.
-* **Logging:** Tracciamento operazioni e debugging tramite `SLF4J` e `Logback`.
-* **Build System:** Apache Maven.
+### 🔧 Tecnologie Utilizzate
 
-### 📂 Struttura del Progetto
+* **Linguaggio**: Java SE 17
+* **Interfaccia Grafica**: JavaFX (FXML + CSS)
+* **Build System**: Apache Maven
+* **Persistenza Dati**: JSON tramite **Jackson Databind**
+* **Logging**: SLF4J + Logback
+
+### 🧩 Design Pattern
+
+* **MVC**: separazione tra logica, dati e interfaccia
+* **Singleton**: gestione condivisa delle risorse (es. `ViewDispatcher`)
+* **DAO / Service Layer**: astrazione delle operazioni di lettura e scrittura
+
+---
+
+## 📂 Struttura del Progetto
+
 ```text
 it.univaq.disim.lpo.dominiouniversitario
-├── core/            # Domain Model (Entità: Studente, Esame, Corso...)
-├── controller/      # JavaFX Controllers (Gestione eventi UI)
-├── service/         # Business Logic (Interfacce e implementazioni)
-│   └── methods/     # Implementazione logica di gestione (JSON parsing)
-├── view/            # Gestione Scene, ViewDispatcher e FXML Loader
+├── core/            # Domain Model (Studente, Esame, Corso...)
+├── controller/      # JavaFX Controllers
+├── service/         # Business Logic
+│   └── methods/     # Implementazioni (JSON parsing)
+├── view/            # Scene management e ViewDispatcher
 └── resources/
-    ├── fxml/        # File descrittivi dell'interfaccia grafica
-    ├── styles.css   # Foglio di stile personalizzato
-    └── *.json       # File di persistenza dati (DB simulato)
+    ├── fxml/        # Layout JavaFX
+    ├── styles.css   # Stile grafico
+    └── *.json       # Persistenza dati (DB simulato)
+```
+
+---
+
+## 🚀 Installazione e Avvio
+
+### 1️⃣ Prerequisiti
+
+Assicurati di avere installato:
+
+* Java JDK 17 o superiore
+* Apache Maven
+* Git
+
+### 2️⃣ Clona il Repository
+
+```bash
+git clone https://github.com/IL_TUO_USERNAME/university-portal-interface.git
+cd university-portal-interface
+```
+
+### 3️⃣ Compila il Progetto
+
+```bash
+mvn clean install
+```
+
+### 4️⃣ Avvia l’Applicazione
+
+```bash
+mvn javafx:run
+```
+
+---
+
+## 🔑 Credenziali di Test (Demo)
+
+Il sistema è preconfigurato con dati di esempio salvati nei file JSON.
+
+| Ruolo              | Username | Password |
+| ------------------ | -------- | -------- |
+| **Amministratore** | admin    | admin    |
+| **Docente**        | docente  | password |
+| **Studente**       | studente | password |
+
+> ⚠️ Le credenziali reali sono gestite nei file
+> `studenti.json` e `docenti.json`
+
+---
+
+## 📌 Note Finali
+
+Questo progetto è stato sviluppato a scopo **didattico** come prova finale del corso di
+**Laboratorio di Programmazione a Oggetti**.
+
