@@ -12,7 +12,7 @@
 
 ## 📖 Descrizione
 
-**UniGest** è un'applicazione desktop standalone progettata per digitalizzare e gestire i processi accademici di un ateneo.
+**UniGest** è un'applicazione desktop progettata per digitalizzare e gestire i processi accademici di un ateneo.
 Il software simula un portale di segreteria completo, permettendo l'interazione tra le tre figure chiave dell'ecosistema universitario:
 
 * 👨‍🎓 **Studenti**
@@ -23,8 +23,7 @@ Il software simula un portale di segreteria completo, permettendo l'interazione 
 
 ## ✨ Funzionalità Principali
 
-Il sistema gestisce l'accesso sicuro tramite **login** e reindirizza l'utente a **dashboard personalizzate** in base al ruolo
-(**RBAC – Role Based Access Control**).
+Il sistema gestisce l'accesso sicuro tramite **login** e reindirizza l'utente a **dashboard personalizzate** in base al ruolo.
 
 ### 👨‍🎓 Area Studente
 
@@ -54,17 +53,15 @@ Il progetto **non utilizza database relazionali tradizionali**, ma implementa un
 
 ### 🔧 Tecnologie Utilizzate
 
-* **Linguaggio**: Java SE 17
+* **Linguaggio**: Java 
 * **Interfaccia Grafica**: JavaFX (FXML + CSS)
 * **Build System**: Apache Maven
 * **Persistenza Dati**: JSON tramite **Jackson Databind**
-* **Logging**: SLF4J + Logback
+
 
 ### 🧩 Design Pattern
 
-* **MVC**: separazione tra logica, dati e interfaccia
 * **Singleton**: gestione condivisa delle risorse (es. `ViewDispatcher`)
-* **DAO / Service Layer**: astrazione delle operazioni di lettura e scrittura
 
 ---
 
@@ -98,8 +95,7 @@ Assicurati di avere installato:
 ### 2️⃣ Clona il Repository
 
 ```bash
-git clone https://github.com/IL_TUO_USERNAME/university-portal-interface.git
-cd university-portal-interface
+git clone https://github.com/mattiaramondo/unigest.git
 ```
 
 ### 3️⃣ Compila il Progetto
