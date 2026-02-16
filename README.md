@@ -3,7 +3,6 @@
 ![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge\&logo=openjdk\&logoColor=white)
 ![JavaFX](https://img.shields.io/badge/JavaFX-UI-007396?style=for-the-badge\&logo=java\&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge\&logo=apache-maven\&logoColor=white)
-![Architecture](https://img.shields.io/badge/Pattern-MVC-success?style=for-the-badge)
 
 > **Progetto finale per il corso di Laboratorio di Programmazione a Oggetti (LPO)**
 > *Università degli Studi dell'Aquila*
