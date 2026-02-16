@@ -54,7 +54,7 @@ Il progetto **non utilizza database relazionali tradizionali**, ma implementa un
 ### 🔧 Tecnologie Utilizzate
 
 * **Linguaggio**: Java 
-* **Interfaccia Grafica**: JavaFX (FXML + CSS)
+* **Interfaccia Grafica**: JavaFX 
 * **Build System**: Apache Maven
 * **Persistenza Dati**: JSON tramite **Jackson Databind**
 
